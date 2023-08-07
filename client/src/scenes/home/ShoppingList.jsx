@@ -37,7 +37,7 @@ const ShoppingList = () => {
   );
 
   const newArrivalsItems = items.filter(
-    (item) => item.attributes.category === "newArrivals"
+    (item) => item.attributes.category === "newArrival"
   );
 
   const bestSellersItems = items.filter(
@@ -64,7 +64,7 @@ const ShoppingList = () => {
         }}
       >
         <Tab label="ALL" value="all" />
-        <Tab label="NEW ARRIVALS" value="newArrivals" />
+        <Tab label="NEW ARRIVALS" value="newArrival" />
         <Tab label="BEST SELLERS" value="bestSellers" />
         <Tab label="TOP RATED" value="topRated" />
       </Tabs>
@@ -80,7 +80,7 @@ const ShoppingList = () => {
           items.map((item) => (
             <Item item={item} key={`${item.name}-${item.id}`} />
           ))}
-        {value === "newArrivals" &&
+        {value === "newArrival" &&
           newArrivalsItems.map((item) => (
             <Item item={item} key={`${item.name}-${item.id}`} />
           ))}
